@@ -7,9 +7,9 @@ Zainstaluj pipem:
 
 Odpal:
 - dla prisoner dillema:
-python run.py --enable-new-api-stack --num-agents=2
+  python run.py --enable-new-api-stack --num-agents=2
 - dla rock paper scissor:
-python rps.py --enable-new-api-stack --num-agents=2
+  python rps.py --enable-new-api-stack --num-agents=2
 
 Przydatne źródła:
 - https://docs.ray.io/en/latest/rllib/rllib-env.html#pettingzoo-multi-agent-environments
