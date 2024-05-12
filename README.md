@@ -6,8 +6,8 @@ Zainstaluj pipem:
 - gymnasium
 
 Odpal:
-python run.py --enable-new-api-stack --num-agents=2 dla prisoner dillema
-python rps.py --enable-new-api-stack --num-agents=2 dla rock paper scissor
+- python run.py --enable-new-api-stack --num-agents=2 dla prisoner dillema
+- python rps.py --enable-new-api-stack --num-agents=2 dla rock paper scissor
 
 Przydatne źródła:
 - https://docs.ray.io/en/latest/rllib/rllib-env.html#pettingzoo-multi-agent-environments
