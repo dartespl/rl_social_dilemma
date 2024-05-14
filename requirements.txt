@@ -1,0 +1,11 @@
+dm_tree
+fsspec
+gymnasium
+lz4
+numpy
+pandas
+pettingzoo
+pyarrow
+ray
+scikit-image
+typer
