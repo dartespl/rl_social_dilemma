@@ -6,6 +6,7 @@ numpy
 pandas
 pettingzoo
 pyarrow
+pygame
 ray
 scikit-image
 typer
