@@ -14,10 +14,12 @@ from ray.rllib.utils.test_utils import (
     add_rllib_example_script_args,
     run_rllib_example_script_experiment,
 )
+
 from ray.rllib.examples.rl_modules.classes import (
     AlwaysSameHeuristicRLM,
     BeatLastHeuristicRLM,
 )
+
 from ray.tune.registry import get_trainable_cls, register_env
 from pettingzoo.utils.conversions import parallel_wrapper_fn
 
@@ -33,7 +35,7 @@ register_env(
 parser = add_rllib_example_script_args(
     default_iters=50,
     default_timesteps=200000,
-    default_reward=6.0,
+    default_reward=600.0,
 )
 parser.add_argument(
     "--use-lstm",
@@ -56,10 +58,8 @@ if __name__ == "__main__":
     #     .environment("PrisonerDillema")
     #     .env_runners(
     #         env_to_module_connector=lambda env: (
-    #             AddObservationsFromEpisodesToBatch(),
-    #             # Only flatten obs for the learning RLModul
+    #             # `agent_ids=...`: Only flatten obs for the learning RLModule.
     #             FlattenObservations(multi_agent=True, agent_ids={"player_0"}),
-    #             WriteObservationsToEpisodes(),
     #         ),
     #     )
     #     .multi_agent(
@@ -123,6 +123,7 @@ if __name__ == "__main__":
     #         "env_runner_results/module_episode_returns_mean/learned": args.stop_reward,
     #     },
     # )
+
     import re
 
     base_config = (
@@ -130,11 +131,7 @@ if __name__ == "__main__":
         .get_default_config()
         .environment("PrisonerDillema")
         .env_runners(
-            env_to_module_connector=lambda env: (
-                AddObservationsFromEpisodesToBatch(),
-                FlattenObservations(multi_agent=True),
-                WriteObservationsToEpisodes(),
-            ),
+            env_to_module_connector=lambda env: FlattenObservations(multi_agent=True),
         )
         .multi_agent(
             policies={"p0", "p1"},

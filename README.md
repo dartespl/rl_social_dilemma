@@ -4,6 +4,7 @@ Zainstaluj pipem:
 - ray
 - pettingzoo
 - gymnasium
+- numpy 1.26.0 (nie 2.0)
 
 Odpal:
 - dla prisoner dillema:
