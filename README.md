@@ -1,18 +1,20 @@
 # rl_social_dilemma
 
-Zainstaluj pipem:
-- ray
-- pettingzoo
-- gymnasium
+Reinforcement learning project with MeltingPot.
 
-Odpal:
-- dla prisoner dillema:
-  python run.py --enable-new-api-stack --num-agents=2
-- dla rock paper scissor:
-  python rps.py --enable-new-api-stack --num-agents=2
+## Getting Started
 
-Przydatne źródła:
-- https://docs.ray.io/en/latest/rllib/rllib-env.html#pettingzoo-multi-agent-environments
-- https://github.com/ray-project/ray/blob/master/rllib/examples/multi_agent/rock_paper_scissors_heuristic_vs_learned.py
-- https://github.com/ray-project/ray/blob/master/rllib/examples/multi_agent/rock_paper_scissors_learned_vs_learned.py
-- https://github.com/tianyu-z/pettingzoo_dilemma_envs
+### Choosing Conda environment
+
+Pick a specification from `./environments/` folder. `environment-forge` is recommended, although prioritizes heavy use of Forge, while `environment-anaconda` moves bulk of package installation onto in-environment `pip`, although still requires access to Forge to complete.
+
+```shell
+conda env create -f environment-{variant}.yml
+```
+(Notice: environment specifications in `./environments/swap-pre-meltingpot/` are experimental optimizations and do not contain all dependencies or MeltingPot, use at your own risk.)
+
+### ~~Running tests notebook~~
+
+### Running code notebook
+
+Open `init.ipynb` in your preferred editor of choice, make sure you have your chosen `RL` environment activated. 
